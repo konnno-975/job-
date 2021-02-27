@@ -1,0 +1,20 @@
+<h1>Job#show</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+    <strong>タイトル</strong>
+    <%= @job.money %>
+</p>
+
+<p>
+    <strong>時間</strong>
+    <%= @job.start_time.strftime("%Y-%m-%d %H:%M") %>
+</p>
+
+<p>
+    <strong>内容</strong>
+    <%= @job.people %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', job_index_path %>
