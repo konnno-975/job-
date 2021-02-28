@@ -5,7 +5,7 @@ RSpec.describe Work, type: :model do
 
   describe "Work バリデーションチェック" do
     before do
-      @work = Work.new(id:1, user_id: 1, start_time: "2021-02-17 09:21:00", end_time: "2021-02-17 09:21:00", money: 1, people: 1, created_at: "2021-02-17 09:21:00", updated_at: "2021-02-17 09:21:00")
+      @work = Work.new(user_id: 1, start_time: "2021-02-17 09:21:00", end_time: "2021-02-17 09:21:00", money: 1, people: 1, created_at: "2021-02-17 09:21:00", updated_at: "2021-02-17 09:21:00")
     end
 
 

@@ -33,7 +33,7 @@ class JobController < ApplicationController
 
   def update
     @job = Work.find(params[:id])
-    if @Work.update(job_parameter)
+    if @job.update(job_parameter)
       redirect_to job_index_path, notice: "編集しました"
     else
       render 'edit'
@@ -43,7 +43,7 @@ class JobController < ApplicationController
   private
 
   def job_parameter
-    params.permit(:start_time, :end_time, :money, :peopele).merge(user_id: current_user.id)
+    params.permit(:start_time, :end_time, :money, :people).merge(user_id: current_user.id)
   end
 
 end

@@ -1,19 +1,18 @@
-<h1>Job#index</h1>
-<%= link_to "バイト詳細" , new_job_path %>
 <p id="notice"><%= notice %></p>
 
-<h1>自分の日記</h1>
-
 <br>
+<div class="main">
+    <div class="container">
+    <h1>バイト表</h1>
+    <%= link_to 'バイト依頼', new_job_path ,class:"btn btn-primary"%>
+        <%= month_calendar events: @jobs do |date, jobs| %>
+            <%= date.day %>
 
-<%= link_to '日記をかく', new_job_path %>
-
-<%= month_calendar events: @jobs do |date, jobs| %>
-    <%= date.day %>
-
-    <% jobs.each do |job| %>
-    <div>
-        <%= link_to job.maney, job_index_path %>
+            <% jobs.each do |job| %>
+                <div>
+                    <%= link_to job.people, job_path(job) %>
+                </div>
+            <% end %>
+        <% end %>
     </div>
-<% end %>
-<% end %>
+</div>

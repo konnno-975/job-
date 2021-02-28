@@ -2,18 +2,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-    <strong>タイトル</strong>
-    <%= @job.money %>
+    <strong>時給</strong>
+    <%= @job.money.to_s + "円" %>
 </p>
 
 <p>
-    <strong>時間</strong>
+    <strong>開始</strong>
     <%= @job.start_time.strftime("%Y-%m-%d %H:%M") %>
 </p>
 
 <p>
-    <strong>内容</strong>
-    <%= @job.people %>
+    <strong>終了</strong>
+    <%= @job.end_time.strftime("%Y-%m-%d %H:%M") %>
+</p>
+
+<p>
+    <strong>人数</strong>
+    <%= "あと"+ @job.people.to_s + "人" %>
 </p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
