@@ -1,0 +1,4 @@
+<h1>Timejobs#index</h1>
+<% @jobs.each do |job|%>
+    <%= link_to job.start_time.strftime("%m-%d %H:%M"), job_path(job) %>
+<% end %>

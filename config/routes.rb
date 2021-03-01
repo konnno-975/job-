@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'timejobs/index'
   resources :job
   post 'job/create' => 'job#create'
   post 'job/:id/update' => 'job#update'
