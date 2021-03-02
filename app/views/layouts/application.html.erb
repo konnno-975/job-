@@ -11,13 +11,20 @@
   </head>
 
   <body>
-    <ul>
-      <li><%= link_to "job+" , "/" %></li>      
-      <li><%= link_to "ログイン" , new_user_session_path %></li>
-      <li><%= link_to "新規登録" , new_user_registration_path %></li>
-      <li><%= link_to "バイト一覧" , job_index_path %></li>
-      <li><%= link_to "バイト依頼", timejobs_index_path %></li>
-    </ul>
+    <header>
+      <%= link_to "job+" , "/" ,class:"header-logo"%>
+      <ul>
+        <% if user_signed_in?%>
+          <li><%= link_to "ログアウト", destroy_user_session_path ,class:"header-list"%></li>
+          <li><%= link_to "バイト依頼", timejobs_index_path ,class:"header-list"%></li>
+          <li><%= link_to "バイト表" , job_index_path ,class:"header-list"%></li>
+          <li><%= link_to current_user.name, job_index_path ,class: "header-list"%></li>
+        <% else %>
+          <li><%= link_to "ログイン" , new_user_session_path ,class:"header-list"%></li>
+          <li><%= link_to "新規登録" , new_user_registration_path ,class:"header-list"%></li>
+        <% end %>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
