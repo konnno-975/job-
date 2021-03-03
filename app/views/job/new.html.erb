@@ -1,23 +1,24 @@
 <%= form_with(url:job_create_path , local: true) do |form| %>
 <div class="main container">
+    <h1>新規バイト</h1>
     <div class="time">
-        <%= form.label :start_time %>
+        <%= form.label :開始 %>
         <%= form.datetime_select :start_time, class:"mb-5" %>
     </div>
 
     <div class="time">
-        <%= form.label :end_time %>
+        <%= form.label :終了 %>
         <%= form.datetime_select :end_time, class:"mb-5" %>
     </div>
 
     <div class="money">
-        <%= form.label :money %>
-        <%= form.text_field :money%>
+        <%= form.label :時給 %>
+        <%= form.text_field :money%>円
     </div>
 
     <div class="people">
-        <%= form.label :people %>
-        <%= form.text_field :people%>
+        <%= form.label :人数 %>
+        <%= form.text_field :people%>人
     </div>
 
     <div class="submit">

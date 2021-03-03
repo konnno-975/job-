@@ -1,6 +1,8 @@
-<div class="main">
+<div class="main container">
     <h1>Timejobs#index</h1>
     <% @jobs.each do |job|%>
-        <%= link_to job.start_time.strftime("%m-%d %H:%M"), job_path(job) %>
+        <div class="time-job">
+            <%= link_to job.start_time.strftime("%m-%d %H:%M")+ " ~ " +job.end_time.strftime("%H:%M"), job_path(job),class:"btn btn-success col-3"%>
+        </div>
     <% end %>
 </div>
