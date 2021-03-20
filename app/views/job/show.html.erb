@@ -1,25 +1,27 @@
-<h1>Job#show</h1>
-<p id="notice"><%= notice %></p>
+<div class="main">
+    <h1>Job#show</h1>
+    <p id="notice"><%= notice %></p>
 
-<p>
-    <strong>時給</strong>
-    <%= @job.money.to_s + "円" %>
-</p>
+    <p>
+        <strong>時給</strong>
+        <%= @job.money.to_s + "円" %>
+    </p>
 
-<p>
-    <strong>開始</strong>
-    <%= @job.start_time.strftime("%Y-%m-%d %H:%M") %>
-</p>
+    <p>
+        <strong>開始</strong>
+        <%= @job.start_time.strftime("%Y-%m-%d %H:%M") %>
+    </p>
 
-<p>
-    <strong>終了</strong>
-    <%= @job.end_time.strftime("%Y-%m-%d %H:%M") %>
-</p>
+    <p>
+        <strong>終了</strong>
+        <%= @job.end_time.strftime("%Y-%m-%d %H:%M") %>
+    </p>
 
-<p>
-    <strong>人数</strong>
-    <%= "あと"+ @job.people.to_s + "人" %>
-</p>
+    <p>
+        <strong>人数</strong>
+        <%= "あと"+ @job.people.to_s + "人" %>
+    </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', job_index_path %>
+    <%= link_to 'Edit', edit_job_path(@job) %> |
+    <%= link_to 'Back', job_index_path %>
+</div>

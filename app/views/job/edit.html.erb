@@ -1,10 +1,9 @@
-<%= form_with(url:"/job/#{@job.id}/update" , local: true) do |form| %>
+<%= form_with(model: @work , local: true) do |form| %>
     <div class="main container">
         <div class="time">
             <%= form.label :start_time %>
             <%= form.datetime_select :start_time, class:"mb-5" %>
         </div>
-    
         <div class="time">
             <%= form.label :end_time %>
             <%= form.datetime_select :end_time, class:"mb-5" %>
@@ -24,4 +23,4 @@
             <%= form.submit %>
         </div>
     </div>
-    <% end %>
+<% end %>

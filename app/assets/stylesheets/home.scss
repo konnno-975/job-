@@ -8,15 +8,15 @@
 }
 header {
     height: 30px;
-}
-header li{
-    display: inline-block;
+    li {
+    display: block;
     list-style: none;
     float: right;
     padding-right: 60px;
     padding-top: 20px;
     color: black;
     font-size: 15px;
+    }
 }
 .header-list {
     color:black;
